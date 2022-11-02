@@ -1,10 +1,11 @@
 import {React,useState} from 'react'
 
+import {motion} from "framer-motion"
 function Footer() {
-   
+ 
     return (
         <div>
-            <footer>
+            <footer >
    <div class="content">
      <div class="left box">
        <div class="upper">
@@ -36,11 +37,11 @@ function Footer() {
          <input type="text" placeholder="Enter email address"></input>
          <input type="submit" name="" value="Send"></input>
          <div class="media-icons">
-           <a href="https://www.facebook.com/ismail.chebane"><i class="fab fa-facebook-f"></i></a>
-           <a href="https://www.instagram.com/ismail_chebane/"><i class="fab fa-instagram"></i></a>
-           <a href="https://twitter.com/ismailchebaane2"><i class="fab fa-twitter"></i></a>
+           <motion.a  whileHover={{scale:1.2,y:"-20px"}} href="https://www.facebook.com/ismail.chebane"><i class="fab fa-facebook-f"></i></motion.a>
+           <motion.a   whileHover={{scale:1.2,y:"-20px"}}  href="https://www.instagram.com/ismail_chebane/"><i class="fab fa-instagram"></i></motion.a>
+           <motion.a   whileHover={{scale:1.2,y:"-20px"}}  href="https://twitter.com/ismailchebaane2"><i class="fab fa-twitter"></i></motion.a>
           
-           <a href="https://www.linkedin.com/in/ismail-chebaane-555b75146"><i class="fab fa-linkedin-in"></i></a>
+           <motion.a   whileHover={{scale:1.2,y:"-20px"}}  href="https://www.linkedin.com/in/ismail-chebaane-555b75146"><i class="fab fa-linkedin-in"></i></motion.a>
          </div>
        </form>
      </div>

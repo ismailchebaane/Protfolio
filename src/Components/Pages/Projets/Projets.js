@@ -6,16 +6,19 @@ import project4 from "../../assets/images/project4.png"
 import project5 from "../../assets/images/project5.png"
 import project6 from "../../assets/images/project6.png"
 import { Link } from 'react-router-dom'
+import {useInView} from "react-intersection-observer"
+import {motion} from "framer-motion"
 function Projets() {
+    const {ref,inView}=useInView();
     return (
-        <div id="projets">
+        <div ref={ref} id="projets">
            <hr></hr>
            <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
     <div class="text-center pb-12">
         
-        <h1 class="font-bold  text-3xl mb-3 md:text-4xl lg:text-5xl font-heading text-gray-900">
+        <motion.h1  animate={{x:inView?[200,0]:0}} class="font-bold  text-3xl mb-3 md:text-4xl lg:text-5xl font-heading text-gray-900">
             Check my Projects
-        </h1>
+        </motion.h1>
         </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
        

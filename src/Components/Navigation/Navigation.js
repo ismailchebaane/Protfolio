@@ -1,6 +1,6 @@
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
-import Footer from '../Footer/Footer';
+import Footer from '../Pages/Footer/Footer';
 import React from 'react'
 import Home from '../Pages/Home/Home';
 import ContactUs from '../Pages/ContactUs/ContactUs';
@@ -18,7 +18,7 @@ function Navigation() {
      <Route  path="/contact" element={<ContactUs />}/>
       </Routes>
 
-     
+      <Footer />
       </Router>
    </div>
     )

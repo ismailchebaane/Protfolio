@@ -1,17 +1,20 @@
 import React from 'react'
 import 'boxicons'
+import {useInView} from "react-intersection-observer"
+import {motion} from "framer-motion"
 function Skills() {
+    const {ref,inView}=useInView();
     return (
-        <div>
+        <div ref={ref}>
          
          <section class="justify-center flex mt-14 skilsss" id="skills">
           
 
                 <div class="skills__container mr-10 max-w-4xl  ">    
-                  <h1 className="text-xl font-bold mb-1">Frontend</h1> 
+                  <motion.h1  animate={{y:inView?[-150,0]:0}} className="text-xl font-bold mb-1">Frontend</motion.h1> 
                  <div className=" justify-around flex mb-4"><hr className="h-1 w-16  bg-black"></hr></div>     
                     <div className=" max-w-xl min-w-md ">
-                             <div class="skills__data">
+                             <motion.div animate={{x:inView?[-250,0]:0}} class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-html5  bx-tada skills__icon'></i>
                                 <span class="skills__name">HTML5</span>
@@ -22,8 +25,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">95%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-240,0]:0}} class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-css3  bx-tada skills__icon'></i>
                                 <span class="skills__name">CSS3</span>
@@ -34,8 +37,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-230,0]:0}} class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-javascript  bx-tada skills__icon' ></i>
                                 <span class="skills__name">JAVASCRIPT</span>
@@ -46,8 +49,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">65%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-220,0]:0}} class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-javascript  bx-tada skills__icon' ></i>
                                 <span class="skills__name">jQuery</span>
@@ -58,8 +61,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">75%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-210,0]:0}} class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-react  bx-tada skills__icon' ></i>
                                 <span class="skills__name">ReactJs</span>
@@ -70,8 +73,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">80%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-200,0]:0}} class="skills__data">
                             <div class="skills__names">
                            
                                 <i class='bx bxl-bootstrap  bx-tada skills__icon'></i>
@@ -83,8 +86,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-190,0]:0}} class="skills__data">
                             <div class="skills__names">
                           
                                 <i class='bx bxs-file-css  bx-tada skills__icon'></i>
@@ -96,8 +99,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[-180,0]:0}} class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxs-paint  bx-tada skills__icon' ></i>
                                 <span class="skills__name">Framer motion</span>
@@ -108,7 +111,7 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">65%</span>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     
                     <div>              
@@ -118,10 +121,10 @@ function Skills() {
 
              <div class="skills__container  max-w-4xl">          
                     <div>
-                    <h1 className="text-xl font-bold mb-1">Backend</h1> 
+                    <motion.h1 animate={{y:inView?[-150,0]:0}} className="text-xl font-bold mb-1">Backend</motion.h1> 
                  <div className=" justify-around flex mb-4"><hr className="h-1 w-16  bg-black"></hr></div>     
            
-                             <div class="skills__data">
+                             <motion.div animate={{x:inView?[250,0]:0}} class="skills__data">
                             <div class="skills__names">
                             
                                 <i class='bx bxl-nodejs  bx-tada skills__icon'></i>
@@ -133,8 +136,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">95%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[230,0]:0}} class="skills__data">
                             <div class="skills__names">
                           
                                 <i class='bx bx-server  bx-tada skills__icon'></i>
@@ -146,8 +149,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[210,0]:0}} class="skills__data">
                             <div class="skills__names">
                         
                            
@@ -160,8 +163,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[190,0]:0}} class="skills__data">
                             <div class="skills__names">
                           
                                 <i class='bx bx-cylinder  bx-tada skills__icon'></i>
@@ -173,8 +176,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[170,0]:0}} class="skills__data">
                             <div class="skills__names">
                       
                             <i class='bx bxs-cylinder  bx-tada skills__icon'></i>
@@ -186,8 +189,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[150,0]:0}}class="skills__data">
                             <div class="skills__names">
                            
                                 <i class='bx bx-cylinder  bx-tada skills__icon' ></i>
@@ -199,7 +202,7 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">65%</span>
                             </div>
-                        </div>
+                        </motion.div>
                       
                     </div>
                     
@@ -213,10 +216,10 @@ function Skills() {
 
             <div class="justify-center flex mt-14 skilsss">
             <div class="skills__container  max-w-4xl">          
-                    <div>
-                    <h1 className="text-xl font-bold mb-1">Other Skills</h1> 
-                 <div className=" justify-around flex mb-4"><hr className="h-1 w-16  bg-black"></hr></div>     
-                 <div class="skills__data">
+                    <div ref={ref}>
+                    <motion.h1 animate={{y:inView?[-100,0]:0}} className="text-xl font-bold mb-1">Other Skills</motion.h1> 
+                 <div className=" justify-around flex mb-4"><motion.hr animate={{y:inView?[100,0]:0}} className="h-1 w-16  bg-black"></motion.hr></div>     
+                 <motion.div animate={{x:inView?[250,0]:0}} class="skills__data">
                             <div class="skills__names">
                         
                            
@@ -229,13 +232,13 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">85%</span>
                             </div>
-                        </div>
+                        </motion.div>
                 
 
 
 
 
-                             <div class="skills__data">
+                             <motion.div animate={{x:inView?[-250,0]:0}} class="skills__data">
                             <div class="skills__names">
                             <box-icon size="md" name='c-plus-plus' type='logo' animation='tada' ></box-icon>
                               
@@ -247,8 +250,8 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">75%</span>
                             </div>
-                        </div>
-                        <div class="skills__data">
+                        </motion.div>
+                        <motion.div animate={{x:inView?[250,0]:0}} class="skills__data">
                             <div class="skills__names">
                           
                             <box-icon size="md" animation='tada' type='logo' name='java'></box-icon>
@@ -260,7 +263,7 @@ function Skills() {
                             <div>
                                 <span class="skills__percentage">75%</span>
                             </div>
-                        </div>
+                        </motion.div>
                        
                        
                       

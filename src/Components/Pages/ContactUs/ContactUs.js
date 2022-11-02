@@ -1,11 +1,13 @@
 import {React,useState} from 'react'
-
+import {useInView} from "react-intersection-observer"
+import {motion} from "framer-motion"
 function ContactUs() {
    const[name,setName]=useState("")
    const[msg,setmsg]=useState("")
    const[email,setemail]=useState("")
+   const {ref,inView}=useInView();
     return (
-        <div id="contact">
+        <div ref={ref} id="contact">
     
 <section class="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
    <div class="container">
@@ -13,9 +15,9 @@ function ContactUs() {
          <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
             <div class="max-w-[570px] ml-9 divdivdivdiv mb-12 lg:mb-0">
                <span class="block mb-4 text-base text-primary font-semibold">
-              <h1 className="h1contcat"> Contact Us</h1>
+              <motion.h1  animate={{x:inView?[300,0]:0}}  className="h1contcat"> Contact Us</motion.h1>
                </span>
-               <h2
+               <motion.h2  animate={{scale:inView?[1.7,1]:0}} 
                   class="
                   text-blue-500
                   mb-6
@@ -28,17 +30,19 @@ function ContactUs() {
                   "
                   >
                   GET IN TOUCH WITH US
-               </h2>
-               <p class="text-base text-body-color leading-relaxed mb-9">
+               </motion.h2>
+               <motion.p  animate={{scale:inView?[0,1]:0}}  class="text-base text-body-color leading-relaxed mb-9">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
                   adiqua minim veniam quis nostrud exercitation ullamco
-               </p>
+               </motion.p>
 
             </div>
          </div>
          <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
-            <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
+            <motion.div 
+             animate={{x:inView?[400,0]:0}}  
+             class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
                <form>
                   <div class="mb-6">
                      <input value={name} onChange={(e)=>{
@@ -929,7 +933,7 @@ function ContactUs() {
                      </svg>
                   </span>
                </div>
-            </div>
+            </motion.div>
          </div>
       </div>
    </div>
